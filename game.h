@@ -7,6 +7,7 @@
 class Game {
     bool is_running;
     void main_menu();
+
     void start_game();
     void handle_menu_input(int choice);
 

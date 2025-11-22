@@ -81,14 +81,13 @@
   * Clear the console screen
   */
  inline void clrscr() {
- #ifdef PLATFORM_WINDOWS
-     system("cls");
- #else
-     // macOS/Unix
-     std::cout << "\033[2J\033[H";
-     std::cout.flush();
- #endif
- }
+#ifdef PLATFORM_WINDOWS
+    system("cls");
+#else
+    // macOS/Unix - use system("clear") for better compatibility
+    system("clear");
+#endif
+}
  
  /**
   * Hide the console cursor
