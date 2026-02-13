@@ -75,6 +75,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)Core;$(ProjectDir)GameObjects;$(ProjectDir)Systems;$(ProjectDir)UI;$(ProjectDir)Managers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -88,6 +89,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)Core;$(ProjectDir)GameObjects;$(ProjectDir)Systems;$(ProjectDir)UI;$(ProjectDir)Managers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <WarningLevel>Level3</WarningLevel>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -105,6 +107,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)Core;$(ProjectDir)GameObjects;$(ProjectDir)Systems;$(ProjectDir)UI;$(ProjectDir)Managers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -118,6 +121,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)Core;$(ProjectDir)GameObjects;$(ProjectDir)Systems;$(ProjectDir)UI;$(ProjectDir)Managers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <WarningLevel>Level3</WarningLevel>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -134,88 +138,88 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="console.h" />
-    <ClInclude Include="Direction.h" />
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="GameConfig.h" />
-    <ClInclude Include="Heart.h" />
-    <ClInclude Include="LivesManager.h" />
-    <ClInclude Include="Player.h" />
-    <ClInclude Include="Point.h" />
-    <ClInclude Include="GameObject.h" />
-    <ClInclude Include="Riddle.h" />
-    <ClInclude Include="Wall.h" />
-    <ClInclude Include="Key.h" />
-    <ClInclude Include="Coin.h" />
-    <ClInclude Include="Door.h" />
-    <ClInclude Include="LightSwitch.h" />
-    <ClInclude Include="Switch.h" />
-    <ClInclude Include="Torch.h" />
-    <ClInclude Include="Gate.h" />
-    <ClInclude Include="GameBoard.h" />
-    <ClInclude Include="LightingSystem.h" />
-    <ClInclude Include="StatusBar.h" />
-    <ClInclude Include="MessageDisplay.h" />
-    <ClInclude Include="PauseMenu.h" />
-    <ClInclude Include="DroppedItem.h" />
-    <ClInclude Include="ObjectManager.h" />
-    <ClInclude Include="CollisionSystem.h" />
-    <ClInclude Include="InteractionHandler.h" />
-    <ClInclude Include="InputHandler.h" />
-    <ClInclude Include="LevelRenderer.h" />
-    <ClInclude Include="BaseScreen.h" />
-    <ClInclude Include="MenuScreen.h" />
-    <ClInclude Include="InstructionsScreen.h" />
-    <ClInclude Include="EndScreen.h" />
-    <ClInclude Include="GameLevel.h" />
-    <ClInclude Include="ScreenParser.h" />
-    <ClInclude Include="Bomb.h" />
-    <ClInclude Include="Obstacle.h" />
-    <ClInclude Include="Spring.h" />
-    <ClInclude Include="GameRecorder.h" />
-    <ClInclude Include="GameStateSaver.h" />
-    <ClInclude Include="LoadGameScreen.h" />
+    <ClInclude Include="Core\console.h" />
+    <ClInclude Include="Core\Direction.h" />
+    <ClInclude Include="Core\Game.h" />
+    <ClInclude Include="Core\GameConfig.h" />
+    <ClInclude Include="Core\GameLevel.h" />
+    <ClInclude Include="Core\GameRecorder.h" />
+    <ClInclude Include="Core\GameStateSaver.h" />
+    <ClInclude Include="Core\Point.h" />
+    <ClInclude Include="GameObjects\Heart.h" />
+    <ClInclude Include="GameObjects\Player.h" />
+    <ClInclude Include="GameObjects\GameObject.h" />
+    <ClInclude Include="GameObjects\Riddle.h" />
+    <ClInclude Include="GameObjects\Wall.h" />
+    <ClInclude Include="GameObjects\Key.h" />
+    <ClInclude Include="GameObjects\Coin.h" />
+    <ClInclude Include="GameObjects\Door.h" />
+    <ClInclude Include="GameObjects\LightSwitch.h" />
+    <ClInclude Include="GameObjects\Switch.h" />
+    <ClInclude Include="GameObjects\Torch.h" />
+    <ClInclude Include="GameObjects\Gate.h" />
+    <ClInclude Include="GameObjects\DroppedItem.h" />
+    <ClInclude Include="GameObjects\Bomb.h" />
+    <ClInclude Include="GameObjects\Obstacle.h" />
+    <ClInclude Include="GameObjects\Spring.h" />
+    <ClInclude Include="Core\GameBoard.h" />
+    <ClInclude Include="Systems\LightingSystem.h" />
+    <ClInclude Include="UI\StatusBar.h" />
+    <ClInclude Include="UI\MessageDisplay.h" />
+    <ClInclude Include="UI\PauseMenu.h" />
+    <ClInclude Include="Systems\ObjectManager.h" />
+    <ClInclude Include="Systems\CollisionSystem.h" />
+    <ClInclude Include="Systems\InteractionHandler.h" />
+    <ClInclude Include="Systems\InputHandler.h" />
+    <ClInclude Include="Systems\LevelRenderer.h" />
+    <ClInclude Include="UI\BaseScreen.h" />
+    <ClInclude Include="UI\MenuScreen.h" />
+    <ClInclude Include="UI\InstructionsScreen.h" />
+    <ClInclude Include="UI\EndScreen.h" />
+    <ClInclude Include="Systems\ScreenParser.h" />
+    <ClInclude Include="UI\LoadGameScreen.h" />
+    <ClInclude Include="Managers\LivesManager.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Heart.cpp" />
-    <ClCompile Include="LivesManager.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Game.cpp" />
-    <ClCompile Include="Player.cpp" />
-    <ClCompile Include="Point.cpp" />
-    <ClCompile Include="GameObject.cpp" />
-    <ClCompile Include="riddle.cpp" />
-    <ClCompile Include="Wall.cpp" />
-    <ClCompile Include="Key.cpp" />
-    <ClCompile Include="Coin.cpp" />
-    <ClCompile Include="Door.cpp" />
-    <ClCompile Include="LightSwitch.cpp" />
-    <ClCompile Include="Switch.cpp" />
-    <ClCompile Include="Torch.cpp" />
-    <ClCompile Include="Gate.cpp" />
-    <ClCompile Include="GameBoard.cpp" />
-    <ClCompile Include="LightingSystem.cpp" />
-    <ClCompile Include="StatusBar.cpp" />
-    <ClCompile Include="MessageDisplay.cpp" />
-    <ClCompile Include="PauseMenu.cpp" />
-    <ClCompile Include="DroppedItem.cpp" />
-    <ClCompile Include="ObjectManager.cpp" />
-    <ClCompile Include="CollisionSystem.cpp" />
-    <ClCompile Include="InteractionHandler.cpp" />
-    <ClCompile Include="InputHandler.cpp" />
-    <ClCompile Include="LevelRenderer.cpp" />
-    <ClCompile Include="BaseScreen.cpp" />
-    <ClCompile Include="MenuScreen.cpp" />
-    <ClCompile Include="InstructionsScreen.cpp" />
-    <ClCompile Include="EndScreen.cpp" />
-    <ClCompile Include="GameLevel.cpp" />
-    <ClCompile Include="ScreenParser.cpp" />
-    <ClCompile Include="Bomb.cpp" />
-    <ClCompile Include="Obstacle.cpp" />
-    <ClCompile Include="Spring.cpp" />
-    <ClCompile Include="GameRecorder.cpp" />
-    <ClCompile Include="GameStateSaver.cpp" />
-    <ClCompile Include="LoadGameScreen.cpp" />
+    <ClCompile Include="Core\main.cpp" />
+    <ClCompile Include="Core\Game.cpp" />
+    <ClCompile Include="Core\GameBoard.cpp" />
+    <ClCompile Include="Core\GameLevel.cpp" />
+    <ClCompile Include="Core\GameRecorder.cpp" />
+    <ClCompile Include="Core\GameStateSaver.cpp" />
+    <ClCompile Include="Core\Point.cpp" />
+    <ClCompile Include="GameObjects\Heart.cpp" />
+    <ClCompile Include="GameObjects\Player.cpp" />
+    <ClCompile Include="GameObjects\GameObject.cpp" />
+    <ClCompile Include="GameObjects\Riddle.cpp" />
+    <ClCompile Include="GameObjects\Wall.cpp" />
+    <ClCompile Include="GameObjects\Key.cpp" />
+    <ClCompile Include="GameObjects\Coin.cpp" />
+    <ClCompile Include="GameObjects\Door.cpp" />
+    <ClCompile Include="GameObjects\LightSwitch.cpp" />
+    <ClCompile Include="GameObjects\Switch.cpp" />
+    <ClCompile Include="GameObjects\Torch.cpp" />
+    <ClCompile Include="GameObjects\Gate.cpp" />
+    <ClCompile Include="GameObjects\DroppedItem.cpp" />
+    <ClCompile Include="GameObjects\Bomb.cpp" />
+    <ClCompile Include="GameObjects\Obstacle.cpp" />
+    <ClCompile Include="GameObjects\Spring.cpp" />
+    <ClCompile Include="Systems\LightingSystem.cpp" />
+    <ClCompile Include="UI\StatusBar.cpp" />
+    <ClCompile Include="UI\MessageDisplay.cpp" />
+    <ClCompile Include="UI\PauseMenu.cpp" />
+    <ClCompile Include="Systems\ObjectManager.cpp" />
+    <ClCompile Include="Systems\CollisionSystem.cpp" />
+    <ClCompile Include="Systems\InteractionHandler.cpp" />
+    <ClCompile Include="Systems\InputHandler.cpp" />
+    <ClCompile Include="Systems\LevelRenderer.cpp" />
+    <ClCompile Include="UI\BaseScreen.cpp" />
+    <ClCompile Include="UI\MenuScreen.cpp" />
+    <ClCompile Include="UI\InstructionsScreen.cpp" />
+    <ClCompile Include="UI\EndScreen.cpp" />
+    <ClCompile Include="Systems\ScreenParser.cpp" />
+    <ClCompile Include="UI\LoadGameScreen.cpp" />
+    <ClCompile Include="Managers\LivesManager.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
